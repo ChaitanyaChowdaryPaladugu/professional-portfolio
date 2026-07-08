@@ -1,44 +1,43 @@
-// Artifact filter buttons
+// Portfolio interactions
 document.addEventListener('DOMContentLoaded', function () {
-  var filterButtons = document.querySelectorAll('.filter-btn');
-    var cards = document.querySelectorAll('.artifact-card');
+  // Project filtering
+  var filters = document.querySelectorAll('.filter');
+  var cards = document.querySelectorAll('.project-card');
 
-      filterButtons.forEach(function (button) {
-          button.addEventListener('click', function () {
-                filterButtons.forEach(function (b) {
-                        b.classList.remove('active');
-                              });
-                                    button.classList.add('active');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filters.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        var cat = card.getAttribute('data-cat');
+        if (f === 'all' || cat === f) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
 
-                                          var filter = button.getAttribute('data-filter');
+  // Active nav link on scroll
+  var sections = document.querySelectorAll('.section');
+  var navLinks = document.querySelectorAll('.topnav a');
 
-                                                cards.forEach(function (card) {
-                                                        var status = card.getAttribute('data-status');
-                                                                if (filter === 'all' || filter === status) {
-                                                                          card.style.display = '';
-                                                                                  } else {
-                                                                                            card.style.display = 'none';
-                                                                                                    }
-                                                                                                          });
-                                                                                                              });
-                                                                                                                });
-                                                                                                                
-                                                                                                                  // Simple scroll-reveal animation for sections
-                                                                                                                    var sections = document.querySelectorAll('.section');
-                                                                                                                      var observer = new IntersectionObserver(function (entries) {
-                                                                                                                          entries.forEach(function (entry) {
-                                                                                                                                if (entry.isIntersecting) {
-                                                                                                                                        entry.target.style.opacity = '1';
-                                                                                                                                                entry.target.style.transform = 'translateY(0)';
-                                                                                                                                                      }
-                                                                                                                                                          });
-                                                                                                                                                            }, { threshold: 0.1 });
-                                                                                                                                                            
-                                                                                                                                                              sections.forEach(function (section) {
-                                                                                                                                                                  section.style.opacity = '0';
-                                                                                                                                                                      section.style.transform = 'translateY(20px)';
-                                                                                                                                                                          section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                                                                                                                                                                              observer.observe(section);
-                                                                                                                                                                                });
-                                                                                                                                                                                });
-                                                                                                                                                                                
+  function onScroll() {
+    var pos = window.scrollY + 120;
+    var current = '';
+    sections.forEach(function (sec) {
+      if (sec.offsetTop <= pos) { current = sec.getAttribute('id'); }
+    });
+    navLinks.forEach(function (link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
