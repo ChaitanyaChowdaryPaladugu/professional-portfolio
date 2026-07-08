@@ -381,3 +381,79 @@ footer {
               font-size: 30px;
       }
 }
+
+.hero-photo {
+   width: 140px;
+   height: 140px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid var(--accent);
+   margin-bottom: 24px;
+}
+
+.education-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 20px;
+}
+
+.edu-card {
+   background: var(--card);
+   border: 1px solid var(--border);
+   border-radius: 12px;
+   padding: 24px;
+}
+
+.edu-card h3 {
+   font-size: 16px;
+   color: var(--accent);
+   margin-bottom: 8px;
+}
+
+.edu-meta {
+   color: var(--text-dim);
+   font-size: 13px;
+   margin-bottom: 8px;
+}
+
+.edu-card p {
+   color: var(--text-dim);
+   font-size: 14px;
+}
+
+.experience-card {
+   background: var(--card);
+   border: 1px solid var(--border);
+   border-radius: 12px;
+   padding: 24px;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.experience-card h3 {
+   font-size: 18px;
+   color: var(--accent);
+   margin-bottom: 4px;
+}
+
+.experience-card ul {
+   margin-top: 12px;
+   padding-left: 20px;
+   color: var(--text-dim);
+   font-size: 14px;
+}
+
+.experience-card li {
+   padding: 4px 0;
+}
+
+.artifact-link {
+   color: var(--accent);
+   font-size: 13px;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.artifact-link:hover {
+   text-decoration: underline;
+}
