@@ -137,6 +137,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 40px 46px;
+  min-width: 0;
 }
 
 .topnav {
@@ -294,6 +295,73 @@ body {
 .proj-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
 .proj-link:hover { text-decoration: underline; }
 .project-card.hidden { display: none; }
+.project-thumbnail { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-radius: 12px; margin-bottom: 18px; border: 1px solid var(--border); }
+
+/* Artifact detail pages */
+.artifact-hero {
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 36px;
+}
+.artifact-hero h1 { font-family: 'Poppins', sans-serif; font-size: 2rem; line-height: 1.3; margin-bottom: 12px; }
+.artifact-hero p { max-width: 760px; }
+.artifact-actions, .project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.artifact-button {
+  display: inline-block;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: #111;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 10px 18px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.artifact-button:hover { transform: translateY(-2px); background: #f2ce8e; }
+.artifact-button:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+.artifact-button-secondary { background: transparent; color: var(--accent); }
+.artifact-button-secondary:hover { background: var(--accent-soft); }
+.artifact-section {
+  border-top: 1px solid var(--border);
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.artifact-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+.artifact-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin: 22px 0 8px;
+}
+.artifact-section ul, .artifact-section ol { padding-left: 22px; color: #cfcfcf; }
+.artifact-section li { margin-bottom: 8px; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-top: 18px; }
+.results-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.results-table caption { text-align: left; color: var(--muted); margin-bottom: 10px; }
+.results-table th, .results-table td { border: 1px solid var(--border); padding: 12px 14px; text-align: left; }
+.results-table th { background: var(--accent-soft); color: var(--accent); font-family: 'Poppins', sans-serif; }
+.results-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.results-table tfoot { font-weight: 700; }
+.artifact-note { background: var(--accent-soft); border-radius: 12px; padding: 16px 18px; }
+.artifact-note p { margin: 0; }
+.evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+.evidence-grid figure { min-width: 0; background: var(--card-2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.evidence-grid img { width: 100%; height: auto; display: block; }
+.evidence-grid figcaption { color: var(--muted); font-size: 0.84rem; line-height: 1.5; padding: 14px 16px; }
 
 /* Certifications */
 .cert-list { list-style: none; display: grid; gap: 12px; }
@@ -352,4 +420,12 @@ body {
   .main { padding: 30px 24px; }
   .cards-grid, .skills-grid, .projects-grid, .contact-grid { grid-template-columns: 1fr; }
   .topnav { justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  body { padding: 12px; }
+  .sidebar, .main { padding: 24px 18px; }
+  .artifact-hero { padding: 22px 18px; }
+  .artifact-actions .artifact-button, .project-actions .artifact-button { width: 100%; text-align: center; }
+  .evidence-grid { grid-template-columns: 1fr; }
 }
