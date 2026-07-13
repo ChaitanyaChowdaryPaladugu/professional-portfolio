@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A professional portfolio artifact comparing traditional machine learning and deep learning through email spam detection and image recognition.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <title>Artifact 2: Machine Learning vs. Deep Learning | Chaitanya Chowdary Paladugu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar-wrap">
+          <img src="profile.jpg" alt="Chaitanya Chowdary Paladugu" class="avatar">
+        </div>
+        <p class="name">Chaitanya Chowdary Paladugu</p>
+        <span class="role-pill">Machine Learning &amp; Data Analytics</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <nav class="contact-list" aria-label="Contact links">
+        <a class="contact-item" href="mailto:c.paladugu@myemail.indwes.edu">
+          <span class="c-icon">&#9993;</span>
+          <span class="c-text"><span class="c-label">EMAIL</span><span class="c-value">c.paladugu@myemail.indwes.edu</span></span>
+        </a>
+        <a class="contact-item" href="tel:+17373335875">
+          <span class="c-icon">&#9742;</span>
+          <span class="c-text"><span class="c-label">PHONE</span><span class="c-value">+1 737-333-5875</span></span>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/chowdary-paladugu1325/" target="_blank" rel="noopener noreferrer">
+          <span class="c-icon">in</span>
+          <span class="c-text"><span class="c-label">LINKEDIN</span><span class="c-value">Connect with Me</span></span>
+        </a>
+        <a class="contact-item" href="https://github.com/ChaitanyaChowdaryPaladugu" target="_blank" rel="noopener noreferrer">
+          <span class="c-icon">&#9679;</span>
+          <span class="c-text"><span class="c-label">GITHUB</span><span class="c-value">GitHub Profile</span></span>
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <nav class="topnav" aria-label="Page navigation">
+        <a href="index.html">Back to Portfolio</a>
+      </nav>
+
+      <article class="section">
+        <header class="artifact-hero">
+          <p class="proj-tech">Professional Portfolio &middot; Artifact 2</p>
+          <h1>Artifact 2: Machine Learning vs. Deep Learning</h1>
+          <p>I compared traditional machine learning and deep learning through two real-world problem types: email spam detection and image recognition.</p>
+          <div class="artifact-actions">
+            <a href="assets/artifact-2/Chaitanya_Machine_Learning_vs_Deep_Learning_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="artifact-button">View or Download the Report</a>
+            <a href="index.html" class="artifact-button artifact-button-secondary">Back to Portfolio</a>
+          </div>
+        </header>
+
+        <section class="artifact-section" aria-labelledby="overview">
+          <h2 id="overview">Project Overview</h2>
+          <p>This project examines how the structure of a problem and its data affects the choice between traditional machine learning and deep learning. I used email spam detection to study a structured binary-classification problem and image recognition to study a problem based on raw, high-dimensional visual data.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="objective">
+          <h2 id="objective">Objective</h2>
+          <p>My objective was to explain why logistic regression is suitable for a traditional machine-learning classification problem and why a convolutional neural network is suitable for image recognition. I also compared why the alternative approach would be less practical in each case.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="traditional-ml">
+          <h2 id="traditional-ml">Traditional Machine Learning Example</h2>
+          <h3>Email Spam Detection with Logistic Regression</h3>
+          <p>Email spam detection is a binary-classification problem because each message must be classified as spam or not spam. Logistic regression can use structured numerical inputs such as word frequencies, links, sender characteristics, and message length to estimate the probability that a message belongs to the spam class.</p>
+          <p>This approach is suitable because it is efficient, produces class probabilities, and offers relative interpretability through its feature coefficients. Gmail provides a real-world context for machine-learning-based spam filtering, but my report evaluates logistic regression as an appropriate traditional method; it does not claim that Gmail currently uses logistic regression in production.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="deep-learning">
+          <h2 id="deep-learning">Deep-Learning Example</h2>
+          <h3>Image Recognition with a Convolutional Neural Network</h3>
+          <p>Image recognition begins with raw pixel values rather than predefined features. A convolutional neural network can learn visual features in stages: early layers identify patterns such as edges and gradients, middle layers combine them into shapes and textures, and deeper layers recognize complete objects or faces.</p>
+          <p>Google Photos provides a real-world context through AI-supported photo organization, content search, and face grouping. My report uses CNN and FaceNet research to explain why deep learning is suitable for image-recognition problems; it does not claim to identify the exact model or internal architecture used by Google Photos.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="comparison">
+          <h2 id="comparison">Logistic Regression and CNN Comparison</h2>
+          <div class="cards-grid">
+            <div class="feature-card">
+              <span class="feature-icon" aria-hidden="true">&#9636;</span>
+              <h3>Logistic Regression</h3>
+              <p>Best suited here to structured inputs and two-class prediction when useful features can be selected before training. It is comparatively efficient and interpretable.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon" aria-hidden="true">&#9673;</span>
+              <h3>Convolutional Neural Network</h3>
+              <p>Best suited here to raw visual data when useful features must be learned automatically across multiple levels of abstraction.</p>
+            </div>
+          </div>
+          <p>Neither approach is universally better. Traditional machine learning is a strong fit when features are already understood and can be structured. Deep learning becomes more useful when the input is unstructured and the system must discover complex features from examples.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="applications">
+          <h2 id="applications">Real-World Applications</h2>
+          <p>The two case studies connect course concepts to familiar applications. Spam filtering shows how classification can separate unwanted email from legitimate messages. Image recognition shows how visual systems can support photo organization, search, face grouping, recognition, verification, and clustering.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="skills">
+          <h2 id="skills">Skills Demonstrated</h2>
+          <ul>
+            <li>Distinguishing traditional machine learning from deep learning</li>
+            <li>Selecting an algorithm based on data structure and problem type</li>
+            <li>Explaining logistic regression and binary classification</li>
+            <li>Explaining convolutional neural networks and hierarchical feature learning</li>
+            <li>Comparing manual feature engineering with automatic feature extraction</li>
+            <li>Connecting technical concepts to real-world applications</li>
+            <li>Researching, citing, and qualifying technical claims</li>
+            <li>Communicating technical ideas clearly for a professional audience</li>
+          </ul>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="challenges">
+          <h2 id="challenges">Challenges and Solutions</h2>
+          <h3>Choosing Comparable Examples</h3>
+          <p>The two examples needed to show a meaningful difference between traditional and deep learning. I addressed this by comparing a structured binary-classification problem with a raw visual-data problem and focusing on how each approach handles features.</p>
+          <h3>Keeping Product Claims Accurate</h3>
+          <p>A real-world product can demonstrate an application without confirming its complete internal model. I separated documented product capabilities from the algorithms evaluated in the report and stated the limits of those comparisons clearly.</p>
+          <h3>Explaining Technical Differences Clearly</h3>
+          <p>The comparison could become too abstract if it focused only on terminology. I addressed this by connecting feature engineering, probability outputs, layered visual learning, interpretability, data requirements, and computational complexity to the two case studies.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="lessons">
+          <h2 id="lessons">What I Learned</h2>
+          <p>I learned that model selection should begin with the problem and the structure of the available data. A more complex model is not automatically a better choice. Logistic regression can be a practical option when the inputs are structured and the output is binary, while CNNs are valuable when visual features must be learned directly from raw pixels. I also learned to separate verified product information from research examples and to qualify technical claims carefully.</p>
+        </section>
+
+        <section class="artifact-section" aria-labelledby="report">
+          <h2 id="report">Portfolio Report</h2>
+          <p>The full report includes the two case studies, detailed comparison, in-text citations, conclusion, and references.</p>
+          <div class="artifact-actions">
+            <a href="assets/artifact-2/Chaitanya_Machine_Learning_vs_Deep_Learning_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="artifact-button">View or Download the Report</a>
+            <a href="index.html" class="artifact-button artifact-button-secondary">Back to Portfolio</a>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+  <script src="script.js?v=4"></script>
+</body>
+</html>
