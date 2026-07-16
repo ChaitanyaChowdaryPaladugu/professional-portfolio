@@ -131,6 +131,8 @@ body {
 
 .artifact-link:hover { background: var(--accent-soft); }
 
+.artifact-link + .artifact-link { margin-top: 10px; }
+
 /* ---------- Main ---------- */
 .main {
   background: var(--card);
