@@ -1,0 +1,72 @@
+.artifact-3-subtitle {
+  color: var(--accent);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.artifact-3-banner {
+  background: #f7f5f1;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-top: 26px;
+  overflow: hidden;
+}
+
+.artifact-3-banner img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.artifact-copy p {
+  max-width: 850px;
+}
+
+.artifact-3-skills .feature-card {
+  min-height: 132px;
+}
+
+.artifact-3-skills .feature-card h3 {
+  color: var(--text);
+  margin: 0;
+}
+
+.artifact-3-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.artifact-3-badge {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 15px;
+}
+
+.reference-list a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .artifact-3-banner {
+    border-radius: 10px;
+    margin-top: 22px;
+  }
+
+  .artifact-3-skills .feature-card {
+    min-height: 0;
+  }
+
+  .artifact-3-badge {
+    width: 100%;
+    text-align: center;
+  }
+}
